@@ -18,8 +18,9 @@ font-family: 'noto_sans_krthin';
 		ul, ol, li{list-style: none;}
 		a{text-decoration: none; color:#777;}
 		a:hover{color: #f5a601;}
-		table,tr,td,th,thead,tbody,tfoot{border:1px solid #777; 
-			border-spacing: 0; border-collapse: collapse;}
+/*		table,tr,td,th,thead,tbody,tfoot{
+            border:1px solid #777; 
+			border-spacing: 0; border-collapse: collapse;}*/
 		address{font-style:normal;}
 		input, textarea{border:1px solid #777; text-indent:5px;}
 		input[type="submit"],

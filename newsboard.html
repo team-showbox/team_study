@@ -21,45 +21,7 @@
     <style>
     </style>
     <script>
-        $(document).ready(function(){
-           var win = $(window),
-               body = $("body");
-           var screen = function(){
-               var viewH = win.width();
-               if(viewH <= 480){
-                   body.css({"background-image": "url(./img/index/contents/conBack_01.png)"});
-               }
-               else if(viewH > 481 && viewH <= 768){
-                   body.css({"background-image": "url(./img/index/contents/conBack_02.png)"});
-               }
-               else if(viewH > 767 && viewH <= 960){
-                   body.css({"background-image": "url(./img/index/contents/conBack_03.png)"});
-               }
-               else{
-                   body.css({"background-image": "url(./img/index/contents/conBack_04.png)"});
-               }
-           };// screen
-           screen();
-           win.on("resize", function(){
-               screen();
-           });// resize
-        });// jQuery 
-        /*========================================*/          
- /*                      var headBox = $("header"),
-                box = $("div");
-                timing = 500;
-            
-            headBox
-                .on("mouseenter", function(){
-                box.stop().slideDown(timing, function(){
-                    box.animate({"backgroundColor": "#d09"}, timing)
-                });
-            })
-                .on("mouseleave", function(){
-                box.stop().slideUp(timing, function(){
-                    box.css({"backgroundColor": "#aee"})
-                });
-            });*/
+
  /*========================================*/          
        $(document).ready(function(){  
            
@@ -163,29 +125,133 @@
      </div><!--// #sub_head-->
      <div id="sub_box">
          <ul>
-             <li></li>
-             <li></li>
-             <li></li>
-             <li></li>
-             <li></li>
+             <li>HOME</li>
+             <li>
+                 <i class="fa fa-angle-right" aria-hidden="true"><span>icon</span></i>
+             </li>
+             <li>NEWS</li>
+             <li>
+                 <i class="fa fa-angle-right" aria-hidden="true"><span>icon</span></i></li>
+             
+             <li>SHOWBOX NEWS</li>
          </ul>
          <form action="#" method="get">
              <fieldset>
                  <legend>내용 검색</legend>
-                 <select name="" id=""></select>
-                 <input type="text" />
-                 <label for=""></label>
-                 <input type="submit" value="검색"/>
+                 <select name="search_box" id="search_box">
+                     <option value="all" selected="selected">전 체</option>
+                     <option value="title">제 목</option>
+                     <option value="content">내 용</option>
+                 </select>
+                 <label for="search_text">검색 할 내용을 입력해주세요.</label>
+                 <input type="text" id="search_text" placeholder="내용을 입력하세요." />
+                 <label for="submit">검색 버튼</label>
+                 <input type="submit" id="submit" value="검색"/>
              </fieldset>
          </form>
      </div><!--// #sub_box-->
      <section id="news_table">
         <h2>쇼박스 뉴스 게시판</h2>
         <table>
-            
+            <tr> 
+                <th><span>번  호</span></th>
+                <th><span>제  목</span></th>
+                <th><span>등록일</span></th> 
+            </tr>
+            <tr>
+               <td>68</td>
+               <td>㈜쇼박스 네이버북스-해냄출판사와 '미스터리 공모전'개최! 영화투자배급사 최초!</td>
+               <td>2016-02-03</td>
+            </tr>
+            <tr>
+               <td>67</td>
+               <td>(주)쇼박스 한국영화팀 1차 합격자 발표안내</td>
+               <td>2016-01-25</td>
+            </tr>
+            <tr>
+               <td>66</td>
+               <td>(주)쇼박스 배급팀, 한국영화팀 1차 합격자 발표 안내</td>
+               <td>2016-01-18</td>
+            </tr>
+            <tr>
+               <td>65</td>
+               <td>㈜쇼박스 인턴 및 경력 채용공고</td>
+               <td>2016-01-07</td>
+               
+            </tr>
+            <tr>
+               <td>64</td>
+               <td>(주)쇼박스 기획/총무팀, 홍보팀 1차 합격자 발표 완료</td>
+               <td>2015-11-27</td>
+            </tr>
+            <tr>
+               <td>63</td>
+               <td>㈜쇼박스 인턴 및 경력 채용공고 마감</td>
+               <td>2015-11-23</td>
+            </tr>
+            <tr>
+               <td>62</td>
+               <td>㈜쇼박스 인턴 및 경력 채용공고</td>
+               <td>2015-11-12</td>
+            </tr>
+            <tr>
+               <td>61</td>
+               <td>㈜미디어플렉스 한국영화팀 인턴 채용공고 마감</td>
+               <td>2015-04-06</td>
+            </tr>
+            <tr>
+               <td>60</td>
+               <td>㈜미디어플렉스 한국영화팀 인턴 채용공고</td> 
+               <td>2015-03-23</td> 
+            </tr>
+            <tr>
+               <td>59</td>
+               <td>쇼박스 2015 기획홍보팀 경력/신입 1차 합격자 안내</td>
+               <td>2015-03-12</td>
+            </tr>
+            <tr>
+               <td>58</td>
+               <td>㈜미디어플렉스 기획홍보팀 채용공고 마감</td>
+               <td>2015-03-03</td>
+            </tr>
+            <tr>
+               <td>57</td>
+               <td>㈜미디어플렉스 기획홍보팀 채용공고</td>
+               <td>2015-02-19</td>
+            </tr>
+            <tr>
+               <td>56</td>
+               <td>㈜미디어플렉스 해외사업팀 채용공고 마감</td>
+               <td>2015-02-16</td>
+            </tr>
+            <tr>
+               <td>55</td>
+               <td>㈜미디어플렉스 해외사업팀 채용공고</td>
+               <td>2015-01-16</td>
+            </tr>
         </table>
      </section><!--// #news_table-->
-    
+     <div id="select_list">
+         <ul>
+             <li class="angle">
+                 <i class="fa fa-angle-double-left" aria-hidden="true"><span>처음으로</span></i>
+             
+             </li>
+             <li class="angle">
+                 <i class="fa fa-angle-left" aria-hidden="true"><span>이전 페이지</span></i>
+             </li>
+             <li class="num">1</li>
+             <li class="num">2</li>
+             <li class="num">3</li>
+             <li class="num">4</li>
+             <li class="num">5</li>
+             <li class="angle">
+                 <i class="fa fa-angle-right" aria-hidden="true"><span>다음 페이지</span></i></li>
+             <li class="angle">
+                 <i class="fa fa-angle-double-right" aria-hidden="true"><span>마지막으로</span></i>
+             </li>
+         </ul>
+     </div><!--// select_list-->
       <div id="white_bar"></div>
       <footer id="web_foot">
          <div class="wrap">

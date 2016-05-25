@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,oCAAoC;AAUpC,oCAAoC",
+"sources": ["../scss/basic.scss"],
+"names": [],
+"file": "basic.css"
+}
