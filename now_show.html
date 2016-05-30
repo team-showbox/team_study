@@ -12,7 +12,16 @@
     <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/jquery/jquery-ui.min.js"></script>
     <script src="https://use.fontawesome.com/daf4cd64c9.js"></script>
-    <script src="./js/sub_movie.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="./fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="./fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <link rel="stylesheet" href="./fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="./fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script src="./js/now_show.js"></script>
     <script src="./js/basic.js"></script>
     <!--[if lte IE 9]>
      <script src="./js/dist/html5shiv.min.js"></script>
@@ -89,7 +98,7 @@
                     <li class="tabs02"><a href="#tab_box02">상영예정작</a></li>
                 </ul>
             </div><!-- //#movie_tabs-->
-            <div id="tab_box01"> 
+            <div id="tab_box01" class="click"> 
             <div id="now_box">
                 <div class="opacity_bar">
                 <ul class="now_show">
@@ -100,7 +109,7 @@
                 </div> 
             </div>  <!-- //#now_box -->    
             <div id="now_box2">   
-                <div id="content_box">    
+                <div id="content_box">  
                     <div id="film_box">
                         <dl class="film_info">
                             <dt>
@@ -129,31 +138,80 @@
                         </dl>
                     </div> <!-- //#film_box -->
                     <div id="poster">
-                        <img src="#" alt="검사외전 이미지">
+                        <img src="./img/show/poster.jpg" alt="검사외전 이미지">
                     </div>
                     <div id="film_gallery">
                         <span>스틸컷</span>
                         <div class="gall_btn lft_btn">
-                            <button type="button">
+                            <button type="button" id="left">
                                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                                 <span>왼쪽버튼</span>
                             </button>
                         </div>
                         <div class="gall_btn rgt_btn">
-                            <button type="button">
+                            <button type="button" id="right">
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                                 <span>오른쪽버튼</span>
                             </button>
                          </div>
                             <ul class="film_gall">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li id="gallery_01">
+                                   <a class="fancybox" rel="group" href="./img/show/cut_01.jpg">
+                                       <img src="./img/show/cut_01.jpg" alt="스틸컷 1" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_02.jpg">
+                                       <img src="./img/show/cut_02.jpg" alt="스틸컷 2" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_03.jpg">
+                                       <img src="./img/show/cut_03.jpg" alt="스틸컷 3" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_04.jpg">
+                                       <img src="./img/show/cut_04.jpg" alt="스틸컷 4" />
+                                   </a>
+                                </li>
+                                <li id="gallery_02">
+                                   <a class="fancybox" rel="group" href="./img/show/cut_05.jpg">
+                                       <img src="./img/show/cut_05.jpg" alt="스틸컷 5" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_06.jpg">
+                                       <img src="./img/show/cut_06.jpg" alt="스틸컷 6" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_07.jpg">
+                                       <img src="./img/show/cut_07.jpg" alt="스틸컷 7" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_08.jpg">
+                                       <img src="./img/show/cut_08.jpg" alt="스틸컷 8" />
+                                   </a>
+                                </li>
+                                <li id="gallery_03">
+                                   <a class="fancybox" rel="group" href="./img/show/cut_09.jpg">
+                                       <img src="./img/show/cut_09.jpg" alt="스틸컷 9" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_10.jpg">
+                                          
+                                       <img src="./img/show/cut_10.jpg" alt="스틸컷 10" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_11.jpg"> 
+                                      <img src="./img/show/cut_11.jpg" alt="스틸컷 11" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_12.jpg">
+                                       <img src="./img/show/cut_12.jpg" alt="스틸컷 12" />
+                                   </a>
+                                </li>
+                                <li id="gallery_04">
+                                   <a class="fancybox" rel="group" href="./img/show/cut_13.jpg">
+                                       <img src="./img/show/cut_13.jpg" alt="스틸컷 13" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_14.jpg">
+                                       <img src="./img/show/cut_14.jpg" alt="스틸컷 14" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_15.jpg">
+                                       <img src="./img/show/cut_15.jpg" alt="스틸컷 15" />
+                                   </a>
+                                   <a class="fancybox" rel="group" href="./img/show/cut_16.jpg">
+                                       <img src="./img/show/cut_16.jpg" alt="스틸컷 16" />
+                                   </a>
+                                </li>
                             </ul>
                         </div> <!-- //#film_gallery -->
                         <div id="film_trailer">
