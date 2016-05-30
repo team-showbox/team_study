@@ -12,6 +12,7 @@
     <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/jquery/jquery-ui.min.js"></script>
     <script src="https://use.fontawesome.com/daf4cd64c9.js"></script>
+    <script src="./js/basic.js"></script>
     <!--[if lte IE 9]>
      <script src="./js/dist/html5shiv.min.js"></script>
      <script src="./js/dist/ie9.min.js"></script>
@@ -21,57 +22,6 @@
     <style>
     </style>
     <script>
-
- /*========================================*/          
-       $(document).ready(function(){  
-           
-               var menuBox = $("#menu_box"),
-                   menuMenu = menuBox.children("ul"),
-                   nav = $("#nav"),
-                   navMenu = nav.children("li"),
-                //   head = $("header"),
-                   timing = 500;
-               
-               var menuSlide = function(){
-                   nav.on("mouseenter", function(){
-                     menuBox.stop().slideDown(500, function(){
-                      
-                  });
-               });//  nav"mouseenter"
-                   menuBox.on("mouseenter", function(){
-                     menuBox.stop().slideDown(500, function(){
-                      
-                  });
-               });//  menuBox"mouseenter"
-              /*     nav.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      menuBox.css({"display": "block"})
-                  });
-               });*///  nav"mouseleave"
-            /*       menuMenu.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      
-                  });
-               });*///  menuMenu"mouseleave"
-                   menuBox.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      
-                  });
-               });//  menuMenu"mouseleave"
-
-               };// menuSlide
-                menuSlide();
-/*
-           var siteLink = function goLink(){
-               var frm = document.link_form;
-               if(frm.link.value !=""){
-                   window.open(frm.link.value);
-               }frm();
-           };
-           siteLink();
-*/
-
-});// jQuery
     </script>
 </head>
   <body>
@@ -89,7 +39,7 @@
                <li><a href="#"><span>COMPANY</span></a></li>
                <li><a href="now_show.html"><span>MOVIE</span></a></li>
                <li><a href="#"><span>IR</span></a></li>
-               <li><a href="newsboard.html"><span>NEWS</span></a></li>
+               <li class="on"><a href="newsboard.html"><span>NEWS</span></a></li>
            </ul>
        </div><!--// #nav-->
        <div class="wrap">

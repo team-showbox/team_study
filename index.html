@@ -12,6 +12,8 @@
     <script src="./js/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/jquery/jquery-ui.min.js"></script>
     <script src="https://use.fontawesome.com/daf4cd64c9.js"></script>
+    <script src="./js/basic.js"></script>
+    <script src="./js/index.js"></script>
     <!--[if lte IE 9]>
      <script src="./js/dist/html5shiv.min.js"></script>
      <script src="./js/dist/ie9.min.js"></script>
@@ -21,95 +23,6 @@
     <style>
     </style>
     <script>
-        $(document).ready(function(){
-           var win = $(window),
-               body = $("body");
-           var screen = function(){
-               var viewH = win.width();
-               if(viewH <= 480){
-                   body.css({"background-image": "url(./img/index/contents/conBack_01.png)"});
-               }
-               else if(viewH > 481 && viewH <= 768){
-                   body.css({"background-image": "url(./img/index/contents/conBack_02.png)"});
-               }
-               else if(viewH > 767 && viewH <= 960){
-                   body.css({"background-image": "url(./img/index/contents/conBack_03.png)"});
-               }
-               else{
-                   body.css({"background-image": "url(./img/index/contents/conBack_04.png)"});
-               }
-           };// screen
-           screen();
-           win.on("resize", function(){
-               screen();
-           });// resize
-        });// jQuery 
-        /*========================================*/          
- /*                      var headBox = $("header"),
-                box = $("div");
-                timing = 500;
-            
-            headBox
-                .on("mouseenter", function(){
-                box.stop().slideDown(timing, function(){
-                    box.animate({"backgroundColor": "#d09"}, timing)
-                });
-            })
-                .on("mouseleave", function(){
-                box.stop().slideUp(timing, function(){
-                    box.css({"backgroundColor": "#aee"})
-                });
-            });*/
- /*========================================*/          
-       $(document).ready(function(){  
-           
-               var menuBox = $("#menu_box"),
-                   menuMenu = menuBox.children("ul"),
-                   nav = $("#nav"),
-                   navMenu = nav.children("li"),
-                //   head = $("header"),
-                   timing = 500;
-               
-               var menuSlide = function(){
-                   nav.on("mouseenter", function(){
-                     menuBox.stop().slideDown(500, function(){
-                      
-                  });
-               });//  nav"mouseenter"
-                   menuBox.on("mouseenter", function(){
-                     menuBox.stop().slideDown(500, function(){
-                      
-                  });
-               });//  menuBox"mouseenter"
-              /*     nav.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      menuBox.css({"display": "block"})
-                  });
-               });*///  nav"mouseleave"
-            /*       menuMenu.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      
-                  });
-               });*///  menuMenu"mouseleave"
-                   menuBox.on("mouseleave", function(){
-                     menuBox.stop().slideUp(500, function(){
-                      
-                  });
-               });//  menuMenu"mouseleave"
-
-               };// menuSlide
-                menuSlide();
-/*
-           var siteLink = function goLink(){
-               var frm = document.link_form;
-               if(frm.link.value !=""){
-                   window.open(frm.link.value);
-               }frm();
-           };
-           siteLink();
-*/
-
-});// jQuery
     </script>
 </head>
   <body>
