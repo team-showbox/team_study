@@ -1,25 +1,25 @@
 $(document).ready(function(){
     
-   var menuBox = $("#menu_box"),
-       menuMenu = menuBox.children("ul"),
+   var menu_box = $("#menu_box"),
+       menuMenu = menu_box.children("ul"),
        nav = $("#nav"),
        navMenu = nav.find("li"),
        timing = 500;
     
     var menuSlide = function(){
         nav.on("mouseenter", function(){
-          menuBox.stop().slideDown(500, function(){
+          menu_box.stop().slideDown(500, function(){
            
           });
         });//  nav"mouseenter"
-        menuBox.on("mouseenter", function(){
-          menuBox.stop().slideDown(500, function(){
+        menu_box.on("mouseenter", function(){
+          menu_box.stop().slideDown(500, function(){
            
           });
         });//  menuBox"mouseenter"
    
-        menuBox.on("mouseleave", function(){
-          menuBox.stop().slideUp(500, function(){
+        menu_box.on("mouseleave", function(){
+          menu_box.stop().slideUp(500, function(){
            
           });
         });//  menuMenu"mouseleave"

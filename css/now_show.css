@@ -369,17 +369,24 @@ html, body {
             color: #f5a601; }
       #movie_box #movie_tabs > ul li.on > a {
         color: #f5a601; }
-  #movie_box #tab_box01 {
-    width: 100%;
-    height: 0;
-    position: absolute;
+  #movie_box #tab_box {
+    width: 200%;
+    height: auto;
+    position: relative;
+    float: left;
+    transition: all 0.5s; }
+  #movie_box #tab_box01.click {
     left: 0;
-    opacity: 0;
+    z-index: 100; }
+  #movie_box #tab_box01 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: -100%;
+    z-index: -100;
+    float: left;
+    background-color: #fff;
     /* -- //#now_box -----------------------------*/ }
-    #movie_box #tab_box01.click {
-      left: 0;
-      opacity: 1;
-      height: auto; }
     #movie_box #tab_box01 > #now_box {
       width: 100%;
       height: 500px;
@@ -587,94 +594,87 @@ html, body {
             height: 410px;
             box-sizing: border-box;
             padding: 0 100px; }
-  #movie_box > #tab_box02 {
-    width: 100%;
-    height: 0;
-    background-color: #FBFBFB;
+  #movie_box #tab_box02.click {
+    z-index: 100; }
+  #movie_box #tab_box02 {
+    width: 50%;
+    height: auto;
     position: absolute;
-    left: -100%;
-    opacity: 0;
-    /* position: absolute;
-     top: 34%;
-     left: 0;
-     z-index: 100;*/ }
-    #movie_box > #tab_box02.click {
-      left: 0;
-      height: auto;
-      opacity: 1; }
-    #movie_box > #tab_box02 > #soon_film_box {
+    z-index: -100;
+    float: left; }
+    #movie_box #tab_box02 > #soon_film_box {
       width: 960px;
       height: 1000px;
       margin: 0 auto;
       box-sizing: border-box;
       padding: 60px 20px; }
-      #movie_box > #tab_box02 > #soon_film_box > .soon_box {
+      #movie_box #tab_box02 > #soon_film_box > .soon_box {
         width: 420px;
         height: 240px;
         float: left;
         margin-right: 80px;
         /* background-color: #fac;*/
         margin-bottom: 60px; }
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box:nth-of-type(even) {
+        #movie_box #tab_box02 > #soon_film_box > .soon_box:nth-of-type(even) {
           margin-right: 0; }
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box > img {
+        #movie_box #tab_box02 > #soon_film_box > .soon_box > img {
           width: 180px;
           height: 100%;
           margin-right: 20px;
           float: left;
           background-color: #333; }
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl {
+        #movie_box #tab_box02 > #soon_film_box > .soon_box > dl {
           width: 180px;
           height: 100%;
           float: right;
           box-sizing: border-box;
           padding: 20px 10px;
           /*background-color: #afc;*/ }
-          #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dt {
+          #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dt {
             width: 100%;
             height: 50px;
             box-sizing: border-box;
             padding: 10px 10px;
             margin-bottom: 10px;
             border-bottom: 1px solid #e3e3e3; }
-            #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dt > strong {
+            #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dt > strong {
               color: #141414;
               font-size: 1.2rem;
               font-weight: bold;
               text-align: left; }
-          #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd {
+          #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd {
             width: 100%;
             height: 150px; }
-            #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul {
+            #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul {
               width: 100%;
               height: 100%;
               box-sizing: border-box;
               padding: 0 10px; }
-              #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li {
+              #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li {
                 width: 100%;
                 color: #141414;
                 font-size: 0.8rem;
                 text-align: left; }
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(1) {
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(1) {
                   height: 40px;
                   line-height: 40px; }
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(2) {
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(2) {
                   height: 70px; }
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(3) {
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(3) {
                   height: 40px;
                   line-height: 40px; }
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p {
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p {
                   font-weight: normal; }
-                  #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p > strong {
+                  #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p > strong {
                     font-weight: bold;
                     margin-right: 10px; }
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > span {
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > span {
                   width: 120px;
                   text-align: left;
                   margin-left: 34px; }
-      #movie_box > #tab_box02 > #soon_film_box > .soon_film07 {
+      #movie_box #tab_box02 > #soon_film_box > .soon_film07 {
         margin-bottom: 0; }
-      #movie_box > #tab_box02 > #soon_film_box > .soon_film08 {
+      #movie_box #tab_box02 > #soon_film_box > .soon_film08 {
         margin-bottom: 0; }
 
 /*# sourceMappingURL=now_show.css.map */

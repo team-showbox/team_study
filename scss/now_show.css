@@ -297,7 +297,7 @@
 /* line 7, E:/test/portfolio/showbox/scss/now_show.scss */
 html, body {
   width: 100%;
-  height: 100%; }
+  height: auto; }
 
 /* line 8, E:/test/portfolio/showbox/scss/now_show.scss */
 #wrap {
@@ -326,8 +326,7 @@ html, body {
   /* line 19, E:/test/portfolio/showbox/scss/now_show.scss */
   #wrap #movie_box {
     width: 100%;
-    height: 100%;
-    margin: 0 auto; }
+    height: auto; }
   /* line 20, E:/test/portfolio/showbox/scss/now_show.scss */
   #wrap #web_foot {
     width: 100%;
@@ -405,6 +404,7 @@ html, body {
 /* -- movie_box -------------------------------------- */
 /* line 54, E:/test/portfolio/showbox/scss/now_show.scss */
 #movie_box {
+  position: relative;
   /* --- //#movie_tabs -------------------------------------------------- */ }
   /* line 55, E:/test/portfolio/showbox/scss/now_show.scss */
   #movie_box #movie_tabs {
@@ -444,11 +444,27 @@ html, body {
       #movie_box #movie_tabs > ul li.on > a {
         color: #f5a601; }
   /* line 90, E:/test/portfolio/showbox/scss/now_show.scss */
-  #movie_box #tab_box01 {
-    width: 100%;
+  #movie_box #tab_box {
+    width: 200%;
     height: auto;
+    position: relative;
+    float: left;
+    transition: all 0.5s; }
+  /* line 94, E:/test/portfolio/showbox/scss/now_show.scss */
+  #movie_box #tab_box01.click {
+    left: 0;
+    z-index: 100; }
+  /* line 95, E:/test/portfolio/showbox/scss/now_show.scss */
+  #movie_box #tab_box01 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: -100%;
+    z-index: -100;
+    float: left;
+    background-color: #fff;
     /* -- //#now_box -----------------------------*/ }
-    /* line 91, E:/test/portfolio/showbox/scss/now_show.scss */
+    /* line 98, E:/test/portfolio/showbox/scss/now_show.scss */
     #movie_box #tab_box01 > #now_box {
       width: 100%;
       height: 500px;
@@ -457,7 +473,7 @@ html, body {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative; }
-      /* line 100, E:/test/portfolio/showbox/scss/now_show.scss */
+      /* line 107, E:/test/portfolio/showbox/scss/now_show.scss */
       #movie_box #tab_box01 > #now_box > .opacity_bar {
         width: 100%;
         height: 200px;
@@ -465,54 +481,55 @@ html, body {
         background-position: bottom bottom;
         position: absolute;
         bottom: 0; }
-        /* line 107, E:/test/portfolio/showbox/scss/now_show.scss */
+        /* line 114, E:/test/portfolio/showbox/scss/now_show.scss */
         #movie_box #tab_box01 > #now_box > .opacity_bar > .now_show {
           width: 960px;
           height: 100%;
           margin: 0 auto;
           box-sizing: border-box;
           padding: 0 50px 10px; }
-          /* line 113, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 120, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box > .opacity_bar > .now_show > li {
             width: 100%;
             height: 50%;
             color: #FBFBFB;
             text-align: left; }
-          /* line 115, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 122, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box > .opacity_bar > .now_show > .film_title {
             text-indent: 1em;
             font-size: 2rem;
             font-weight: bold;
             line-height: 90px; }
-          /* line 122, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 129, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box > .opacity_bar > .now_show > .synop {
             font-size: 0.9rem;
             font-weight: normal; }
-    /* line 130, E:/test/portfolio/showbox/scss/now_show.scss */
+    /* line 137, E:/test/portfolio/showbox/scss/now_show.scss */
     #movie_box #tab_box01 > #now_box2 {
       width: 960px;
       height: auto;
       margin: 0 auto;
       padding: 60px 40px;
       box-sizing: border-box; }
-      /* line 133, E:/test/portfolio/showbox/scss/now_show.scss */
+      /* line 140, E:/test/portfolio/showbox/scss/now_show.scss */
       #movie_box #tab_box01 > #now_box2 > #content_box {
         width: 100%;
         height: 1089px;
+        position: relative;
         /* // 영화 정보 --------------------------------------------------------------------------*/
         /* // 갤러리  -----------------------------------------------------------------*/
         /* // 예고편 --------------------------------------------------------- */ }
-        /* line 136, E:/test/portfolio/showbox/scss/now_show.scss */
+        /* line 144, E:/test/portfolio/showbox/scss/now_show.scss */
         #movie_box #tab_box01 > #now_box2 > #content_box > #film_box {
           width: 500px;
           height: 325px;
           float: left; }
-          /* line 140, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 148, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info {
             width: 100%;
             height: 100%;
             color: #141414; }
-            /* line 144, E:/test/portfolio/showbox/scss/now_show.scss */
+            /* line 152, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dt {
               width: 100%;
               height: 92px;
@@ -520,17 +537,17 @@ html, body {
               text-indent: 1em;
               border-bottom: 1px solid #e3e3e3;
               margin-bottom: 20px; }
-              /* line 150, E:/test/portfolio/showbox/scss/now_show.scss */
+              /* line 158, E:/test/portfolio/showbox/scss/now_show.scss */
               #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dt > strong {
                 font-size: 2.2rem;
                 font-weight: bold;
                 line-height: 60px; }
-              /* line 155, E:/test/portfolio/showbox/scss/now_show.scss */
+              /* line 163, E:/test/portfolio/showbox/scss/now_show.scss */
               #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dt > p {
                 font-size: 0.8rem;
                 font-weight: bold;
                 text-indent: 1.5em; }
-            /* line 161, E:/test/portfolio/showbox/scss/now_show.scss */
+            /* line 169, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dd {
               width: 100%;
               height: 210px;
@@ -539,25 +556,25 @@ html, body {
               padding-right: 258px;
               border-bottom: 1px solid #e3e3e3;
               text-indent: 1em; }
-              /* line 169, E:/test/portfolio/showbox/scss/now_show.scss */
+              /* line 177, E:/test/portfolio/showbox/scss/now_show.scss */
               #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dd > ul {
                 width: 100%; }
-                /* line 170, E:/test/portfolio/showbox/scss/now_show.scss */
+                /* line 178, E:/test/portfolio/showbox/scss/now_show.scss */
                 #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dd > ul > li {
                   color: #141414;
                   font-size: 0.8rem;
                   text-align: left; }
-                  /* line 173, E:/test/portfolio/showbox/scss/now_show.scss */
+                  /* line 181, E:/test/portfolio/showbox/scss/now_show.scss */
                   #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dd > ul > li > p {
                     float: left;
                     font-weight: normal;
                     margin-bottom: 16px; }
-                    /* line 177, E:/test/portfolio/showbox/scss/now_show.scss */
+                    /* line 185, E:/test/portfolio/showbox/scss/now_show.scss */
                     #movie_box #tab_box01 > #now_box2 > #content_box > #film_box > .film_info > dd > ul > li > p > strong {
                       float: left;
                       font-weight: bold;
                       margin-right: 34px; }
-        /* line 188, E:/test/portfolio/showbox/scss/now_show.scss */
+        /* line 196, E:/test/portfolio/showbox/scss/now_show.scss */
         #movie_box #tab_box01 > #now_box2 > #content_box > #poster {
           width: 380px;
           height: 325px;
@@ -567,13 +584,11 @@ html, body {
           /*padding: 0 60px;
                 margin-top: 40px;
                 margin-left: 90px;*/ }
-          /* line 197, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 205, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #poster > img {
             width: 100%;
-            height: 100%;
-            display: block;
-            background-color: #f5a601; }
-        /* line 203, E:/test/portfolio/showbox/scss/now_show.scss */
+            display: block; }
+        /* line 209, E:/test/portfolio/showbox/scss/now_show.scss */
         #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery {
           width: 100%;
           height: 164px;
@@ -583,7 +598,7 @@ html, body {
           /*margin: 20px 12px 40px 64px;*/
           overflow: hidden;
           position: relative; }
-          /* line 214, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 220, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > span {
             width: 100%;
             height: 24px;
@@ -596,85 +611,88 @@ html, body {
             padding-bottom: 10px;
             margin-bottom: 20px;
             border-bottom: 1px solid #e3e3e3; }
-          /* line 226, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 232, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn {
             width: 40px;
             height: 100px;
             position: absolute;
             top: 54px;
+            z-index: 200;
             transition: all 0.5s; }
-            /* line 232, E:/test/portfolio/showbox/scss/now_show.scss */
+            /* line 238, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn:hover i {
-              color: #676767;
-              transform: scale(1.2); }
-            /* line 233, E:/test/portfolio/showbox/scss/now_show.scss */
+              color: #f5a601;
+              transform: scale(1.2);
+              text-shadow: 1px 2px 4px #555; }
+            /* line 240, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn.lft_btn {
               left: 0; }
-            /* line 234, E:/test/portfolio/showbox/scss/now_show.scss */
+            /* line 241, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn.rgt_btn {
               right: 0; }
-            /* line 235, E:/test/portfolio/showbox/scss/now_show.scss */
+            /* line 242, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn > button {
               width: 100%;
               height: 100%;
               cursor: pointer;
-              background-color: rgba(251, 251, 251, 0.8); }
-              /* line 237, E:/test/portfolio/showbox/scss/now_show.scss */
+              background-color: transparent; }
+              /* line 244, E:/test/portfolio/showbox/scss/now_show.scss */
               #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn > button > i {
                 color: rgba(245, 166, 1, 0.5);
                 font-size: 3rem;
                 transition: all 0.5s; }
-              /* line 238, E:/test/portfolio/showbox/scss/now_show.scss */
+              /* line 245, E:/test/portfolio/showbox/scss/now_show.scss */
               #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .gall_btn > button > span {
                 width: 0;
                 height: 0;
                 display: block;
                 overflow: hidden; }
-          /* line 241, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 248, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall {
-            width: 200%;
+            width: 300%;
             height: 110px;
-            margin-left: -30%;
-            overflow: hidden; }
-            /* line 246, E:/test/portfolio/showbox/scss/now_show.scss */
+            margin-left: -100%; }
+            /* line 252, E:/test/portfolio/showbox/scss/now_show.scss */
             #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li {
-              width: calc(100% / 12);
-              height: 100px;
-              float: left;
-              margin-right: 10px;
-              overflow: hidden; }
-              /* line 252, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(1) {
-                background-color: #fac; }
-              /* line 253, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(2) {
-                background-color: #afc; }
-              /* line 254, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(3) {
-                background-color: #324; }
-              /* line 255, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(4) {
-                background-color: #876; }
+              width: calc(100% / 3);
+              height: 100%;
+              float: left; }
               /* line 256, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(5) {
-                background-color: #125; }
-              /* line 257, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(6) {
-                background-color: #acd; }
-              /* line 258, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:nth-child(7) {
-                background-color: #ff3; }
-              /* line 259, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li:last-child {
-                margin-right: 0;
-                background-color: #fda; }
-        /* line 266, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li > a {
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                float: left; }
+                /* line 260, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li > a > img {
+                  width: 100%; }
+              /* line 263, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li#gallery_01 > a {
+                width: 25%;
+                height: 100%;
+                display: block; }
+              /* line 267, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li#gallery_02 > a {
+                width: 25%;
+                height: 100%;
+                display: block; }
+              /* line 271, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li#gallery_03 > a {
+                width: 25%;
+                height: 100%;
+                display: block; }
+              /* line 275, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box01 > #now_box2 > #content_box > #film_gallery > .film_gall > li#gallery_04 > a {
+                width: 25%;
+                height: 100%;
+                display: block; }
+        /* line 283, E:/test/portfolio/showbox/scss/now_show.scss */
         #movie_box #tab_box01 > #now_box2 > #content_box > #film_trailer {
           width: 100%;
           height: 480px;
           margin-top: 60px;
           float: left; }
-          /* line 272, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 289, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_trailer > span {
             width: 100%;
             height: 24px;
@@ -687,112 +705,113 @@ html, body {
             padding-bottom: 10px;
             margin-bottom: 20px;
             border-bottom: 1px solid #e3e3e3; }
-          /* line 284, E:/test/portfolio/showbox/scss/now_show.scss */
+          /* line 301, E:/test/portfolio/showbox/scss/now_show.scss */
           #movie_box #tab_box01 > #now_box2 > #content_box > #film_trailer > iframe {
             width: 100%;
             height: 410px;
             box-sizing: border-box;
             padding: 0 100px; }
-  /* line 294, E:/test/portfolio/showbox/scss/now_show.scss */
-  #movie_box > #tab_box02 {
-    width: 100%;
-    height: 1000px;
-    background-color: #FBFBFB;
-    /* position: absolute;
-        top: 34%;
-        left: 0;
-        z-index: 100;*/ }
-    /* line 303, E:/test/portfolio/showbox/scss/now_show.scss */
-    #movie_box > #tab_box02 > #soon_film_box {
+  /* line 311, E:/test/portfolio/showbox/scss/now_show.scss */
+  #movie_box #tab_box02.click {
+    z-index: 100; }
+  /* line 312, E:/test/portfolio/showbox/scss/now_show.scss */
+  #movie_box #tab_box02 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: -100;
+    float: left; }
+    /* line 314, E:/test/portfolio/showbox/scss/now_show.scss */
+    #movie_box #tab_box02 > #soon_film_box {
       width: 960px;
-      height: 100%;
+      height: 1000px;
       margin: 0 auto;
       box-sizing: border-box;
       padding: 60px 20px; }
-      /* line 309, E:/test/portfolio/showbox/scss/now_show.scss */
-      #movie_box > #tab_box02 > #soon_film_box > .soon_box {
+      /* line 320, E:/test/portfolio/showbox/scss/now_show.scss */
+      #movie_box #tab_box02 > #soon_film_box > .soon_box {
         width: 420px;
         height: 240px;
         float: left;
         margin-right: 80px;
         /* background-color: #fac;*/
         margin-bottom: 60px; }
-        /* line 316, E:/test/portfolio/showbox/scss/now_show.scss */
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box:nth-of-type(even) {
+        /* line 327, E:/test/portfolio/showbox/scss/now_show.scss */
+        #movie_box #tab_box02 > #soon_film_box > .soon_box:nth-of-type(even) {
           margin-right: 0; }
-        /* line 317, E:/test/portfolio/showbox/scss/now_show.scss */
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box > img {
+        /* line 328, E:/test/portfolio/showbox/scss/now_show.scss */
+        #movie_box #tab_box02 > #soon_film_box > .soon_box > img {
           width: 180px;
           height: 100%;
           margin-right: 20px;
           float: left;
           background-color: #333; }
-        /* line 323, E:/test/portfolio/showbox/scss/now_show.scss */
-        #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl {
+        /* line 334, E:/test/portfolio/showbox/scss/now_show.scss */
+        #movie_box #tab_box02 > #soon_film_box > .soon_box > dl {
           width: 180px;
           height: 100%;
           float: right;
           box-sizing: border-box;
           padding: 20px 10px;
           /*background-color: #afc;*/ }
-          /* line 330, E:/test/portfolio/showbox/scss/now_show.scss */
-          #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dt {
+          /* line 341, E:/test/portfolio/showbox/scss/now_show.scss */
+          #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dt {
             width: 100%;
             height: 50px;
             box-sizing: border-box;
             padding: 10px 10px;
             margin-bottom: 10px;
             border-bottom: 1px solid #e3e3e3; }
-            /* line 337, E:/test/portfolio/showbox/scss/now_show.scss */
-            #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dt > strong {
+            /* line 348, E:/test/portfolio/showbox/scss/now_show.scss */
+            #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dt > strong {
               color: #141414;
               font-size: 1.2rem;
               font-weight: bold;
               text-align: left; }
-          /* line 343, E:/test/portfolio/showbox/scss/now_show.scss */
-          #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd {
+          /* line 354, E:/test/portfolio/showbox/scss/now_show.scss */
+          #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd {
             width: 100%;
             height: 150px; }
-            /* line 346, E:/test/portfolio/showbox/scss/now_show.scss */
-            #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul {
+            /* line 357, E:/test/portfolio/showbox/scss/now_show.scss */
+            #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul {
               width: 100%;
               height: 100%;
               box-sizing: border-box;
               padding: 0 10px; }
-              /* line 351, E:/test/portfolio/showbox/scss/now_show.scss */
-              #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li {
+              /* line 362, E:/test/portfolio/showbox/scss/now_show.scss */
+              #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li {
                 width: 100%;
                 color: #141414;
                 font-size: 0.8rem;
                 text-align: left; }
-                /* line 355, E:/test/portfolio/showbox/scss/now_show.scss */
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(1) {
+                /* line 366, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(1) {
                   height: 40px;
                   line-height: 40px; }
-                /* line 356, E:/test/portfolio/showbox/scss/now_show.scss */
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(2) {
+                /* line 367, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(2) {
                   height: 70px; }
-                /* line 357, E:/test/portfolio/showbox/scss/now_show.scss */
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(3) {
+                /* line 368, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li:nth-child(3) {
                   height: 40px;
                   line-height: 40px; }
-                /* line 358, E:/test/portfolio/showbox/scss/now_show.scss */
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p {
+                /* line 369, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p {
                   font-weight: normal; }
-                  /* line 360, E:/test/portfolio/showbox/scss/now_show.scss */
-                  #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p > strong {
+                  /* line 371, E:/test/portfolio/showbox/scss/now_show.scss */
+                  #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > p > strong {
                     font-weight: bold;
                     margin-right: 10px; }
-                /* line 364, E:/test/portfolio/showbox/scss/now_show.scss */
-                #movie_box > #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > span {
+                /* line 375, E:/test/portfolio/showbox/scss/now_show.scss */
+                #movie_box #tab_box02 > #soon_film_box > .soon_box > dl > dd > ul > li > span {
                   width: 120px;
                   text-align: left;
                   margin-left: 34px; }
-      /* line 373, E:/test/portfolio/showbox/scss/now_show.scss */
-      #movie_box > #tab_box02 > #soon_film_box > .soon_film07 {
+      /* line 384, E:/test/portfolio/showbox/scss/now_show.scss */
+      #movie_box #tab_box02 > #soon_film_box > .soon_film07 {
         margin-bottom: 0; }
-      /* line 374, E:/test/portfolio/showbox/scss/now_show.scss */
-      #movie_box > #tab_box02 > #soon_film_box > .soon_film08 {
+      /* line 385, E:/test/portfolio/showbox/scss/now_show.scss */
+      #movie_box #tab_box02 > #soon_film_box > .soon_film08 {
         margin-bottom: 0; }
 
 /*# sourceMappingURL=now_show.css.map */

@@ -1,27 +1,36 @@
 // sub_movie.js
 
 $(document).ready(function(){
+    
+    
+    
     var tabsBox = function(){
-        var tab_li = $("#movie_tabs li"),
-            box_01 = $('#tab_box01'),
-            box_02 = $('#tab_box02'),
-            tabBoxWidth = $("#tab_box01").width(),
-            movieBox = $("#movie_box"),
-            movieTab = $("#movie_tabs"),
-            wrap = $("#wrap"),
-            index = $(this).index();
-       movieBox.height(movieTab.height() + box_01.height());         
+        var tab_li     = $("#movie_tabs li"),
+            box        = $(".box"),
+            boxH       = box.height(),
+            box_01     = $('#tab_box01'),
+            box_02     = $('#tab_box02'),
+            tabBoxWidth= $("#tab_box01").width(),
+            tab_box    = $("#tab_box"),
+            movie_box  = $("#movie_box"),
+            movie_tabs = $("#movie_tabs"),
+            wrap       = $("#wrap"), 
+            index      = $(this).index(); 
+        
+       movie_box.height(50 + box_01.height()); 
+       tab_box.height(box_01.height()); 
        tab_li.eq(0).on("click", function(e){
            e.preventDefault();
-           box_01.removeClass("out").addClass("click").siblings().removeClass("click");
-           movieBox.height(movieTab.height() + box_01.height());
-           wrap.css({'overflow': 'visible'});
+           box_01.addClass("click").siblings().removeClass("click");
+           movie_box.height(50 + box_01.height());
+           tab_box.height(box_01.height());
        });
        
        tab_li.eq(1).on("click", function(e){
            e.preventDefault();
-           box_02.addClass("click").siblings().addClass("out").removeClass("click");
-           movieBox.height(movieTab.height() + box_02.height());
+           box_02.addClass("click").siblings().removeClass("click");
+           movie_box.height(50 + box_02.height());
+           tab_box.height(box_02.height());
            wrap.css({'overflow': 'hidden'});
        });
     };
@@ -63,6 +72,4 @@ $(document).ready(function(){
     banner();
     
     $(".fancybox").fancybox();
-    
-    
 });// jquery
