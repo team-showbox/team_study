@@ -42,5 +42,13 @@ $(document).ready(function(){
          navMenu.removeClass();
          navMenu.eq(3).addClass("on");
     });
+    
+    /*     팝업 박스    */ 
+        $(".close_btn").on("click", function(){
+                $("#pop_up").fadeOut();
+            });
+        $("body").on("click", function(){
+                $("#pop_up").fadeOut(); 
+            });
 });// jQuery
  
